@@ -26,13 +26,11 @@ class Myprincipal extends StatefulWidget {
 }
 
 class _Myprincipal extends State<Myprincipal> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      body: Center (
-        child: Container (
+      body: Center(
+        child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -42,52 +40,51 @@ class _Myprincipal extends State<Myprincipal> {
                 ),
                 margin: const EdgeInsets.all(20.0),
               ),
-              Container (
+              Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(10.0),
                 //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
-                child: ElevatedButton (
-                  child: Text('CREAR CUENTA', style: GoogleFonts.getFont('Arimo'),),
-                  style: ElevatedButton.styleFrom(
-                    onPrimary: Colors.white,
-                    primary: const Color.fromRGBO(199, 35, 27,1),
-                    minimumSize: const Size(250,40),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                      textStyle: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      )
-
+                child: ElevatedButton(
+                  child: Text(
+                    'CREAR CUENTA',
+                    style: GoogleFonts.getFont('Arimo'),
                   ),
-
-                  onPressed: () {},
-
-                ),
-
-              ),
-              Container (
-                alignment: Alignment.center,
-                child: ElevatedButton (
-                  child: Text('INICIAR SESION', style: GoogleFonts.getFont('Arimo'),),
                   style: ElevatedButton.styleFrom(
                       onPrimary: Colors.white,
-                      primary: const Color.fromRGBO(0,0,0,1),
-                      minimumSize: const Size(250,40),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+                      primary: const Color.fromRGBO(200, 35, 27, 1),
+                      minimumSize: const Size(250, 40),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5)),
                       textStyle: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                      )
-                  ),
-
+                      )),
                   onPressed: () {},
-
                 ),
-
               ),
-          ],
+              Container(
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  child: Text(
+                    'INICIAR SESION',
+                    style: GoogleFonts.getFont('Arimo'),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                      onPrimary: Colors.white,
+                      primary: const Color.fromRGBO(0, 0, 0, 1),
+                      minimumSize: const Size(250, 40),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5)),
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      )),
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
