@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/coex_prototipo1/BuildConfig.java
+ com.example.coex_prototipo1.BuildConfig
