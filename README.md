@@ -1,6 +1,6 @@
 # coex_prototipo1
 
-A new Flutter project.
+cambiar readme
 
 ## Getting Started
 
