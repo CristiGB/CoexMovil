@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Myprincipal(),
+      // Elimino el banner de debug que se encuentra en la parte superior derecha del aplicativo
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -46,27 +48,26 @@ class _Myprincipal extends State<Myprincipal> {
                 margin: const EdgeInsets.all(10.0),
                 //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
                 child: ElevatedButton(
-                  child: Text(
-                    'CREAR CUENTA',
-                    style: GoogleFonts.getFont('Arimo'),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                      onPrimary: Colors.white,
-                      primary: const Color.fromRGBO(199, 35, 27, 1),
-                      minimumSize: const Size(250, 40),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      textStyle: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      )),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => welcomeSinup())
-                    );
-                  }
-                ),
+                    child: Text(
+                      'CREAR CUENTA',
+                      style: GoogleFonts.getFont('Arimo'),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        onPrimary: Colors.white,
+                        primary: const Color.fromRGBO(199, 35, 27, 1),
+                        minimumSize: const Size(250, 40),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                        )),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => welcomeSinup()));
+                    }),
               ),
               Container(
                 alignment: Alignment.center,

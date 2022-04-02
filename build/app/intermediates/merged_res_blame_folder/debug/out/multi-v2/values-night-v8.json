@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/coex/StudioProjects/CoexMovil/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/laglan/CoexMovil/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/coex/StudioProjects/CoexMovil/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/laglan/CoexMovil/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
