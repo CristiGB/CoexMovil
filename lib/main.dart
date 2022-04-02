@@ -49,7 +49,7 @@ class _Myprincipal extends State<Myprincipal> {
                 //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
                 child: ElevatedButton(
                     child: Text(
-                      'CREAR CUENTA',
+                      'Crear cuenta',
                       style: GoogleFonts.getFont('Arimo'),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -73,7 +73,7 @@ class _Myprincipal extends State<Myprincipal> {
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   child: Text(
-                    'INICIAR SESION',
+                    'Iniciar sesion',
                     style: GoogleFonts.getFont('Arimo'),
                   ),
                   style: ElevatedButton.styleFrom(
