@@ -33,14 +33,51 @@ class welcomeSinup extends StatelessWidget{
                      width: 314,
                      child: Column(
                          children: [
+                           Container(
+                             width: 314,
+                             child: Text(
+                               'Nombre y Apellido',
+                               textAlign: TextAlign.left,
+                               style: GoogleFonts.getFont('Arimo'),
+                             ),
+                           ),
+                           TextFormField(
+                             decoration: InputDecoration(
+                               border: OutlineInputBorder(),
+                               //labelText: 'Nombre y Apellido',
+                             ),
+                           ),
+                           Container(
+                             width: 314,
+                             margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                             child: Text(
+                               'Correo electronico',
+                               textAlign: TextAlign.left,
+                              // style: GoogleFonts.getFont.Lato(
+                                 //color: Color.fromRGBO(0, 0, 0, 0.5),
+                               //),
+                              // ),
+                             ),
+
+                           ),
                            TextField(
                              decoration: InputDecoration(
-                               border: OutlineInputBorder()
+                               border: OutlineInputBorder(),
+                             ),
+                           ),
+                           Container(
+                             width: 314,
+                             margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                             child: Text(
+                               'Contraseña',
+                               textAlign: TextAlign.left,
+                               style: GoogleFonts.getFont('Arimo'),
                              ),
                            ),
                            TextField(
-                           ),
-                           TextField(
+                             decoration: InputDecoration(
+                               border: OutlineInputBorder(),
+                             ),
                            ),
                          ]
                      )
@@ -69,7 +106,7 @@ class welcomeSinup extends StatelessWidget{
                         ),
                         ElevatedButton(
 
-                          child: Text(
+                          child: new Text(
                             'Continuar',
                             style: GoogleFonts.getFont('Arimo'),
                           ),
@@ -84,6 +121,19 @@ class welcomeSinup extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                               )),
                           onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    color: Colors.amberAccent,
+                    margin: EdgeInsets.fromLTRB(0, 10, 5, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                        '¿ya tienes cuenta?',
+                         style: GoogleFonts.getFont('Arimo'),
                         ),
                       ],
                     ),
