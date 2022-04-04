@@ -49,7 +49,7 @@ class _Myprincipal extends State<Myprincipal> {
                 //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
                 child: ElevatedButton(
                     child: Text(
-                      'CREAR CUENTA',
+                      'Crear Cuenta',
                       style: GoogleFonts.getFont('Arimo'),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -59,7 +59,7 @@ class _Myprincipal extends State<Myprincipal> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
                         textStyle: const TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w400,
                         )),
                     onPressed: () {
@@ -73,7 +73,7 @@ class _Myprincipal extends State<Myprincipal> {
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   child: Text(
-                    'INICIAR SESION',
+                    'Iniciar Sesion',
                     style: GoogleFonts.getFont('Arimo'),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -83,7 +83,7 @@ class _Myprincipal extends State<Myprincipal> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5)),
                       textStyle: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w400,
                       )),
                   onPressed: () {},
