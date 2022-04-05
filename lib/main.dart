@@ -34,52 +34,27 @@ class _Myprincipal extends State<Myprincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: const Image(
-                  image: AssetImage('assets/rsc/logo.png'),
-                ),
-                margin: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: const Image(
+                image: AssetImage('assets/rsc/logo.png'),
               ),
-              Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(10.0),
-                //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
-                child: ElevatedButton(
-                    child: Text(
-                      'Crear Cuenta',
-                      style: GoogleFonts.getFont('Arimo'),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        onPrimary: Colors.white,
-                        primary: const Color.fromRGBO(199, 35, 27, 1),
-                        minimumSize: const Size(250, 40),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        textStyle: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                        )),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => welcomeSinup()));
-                    }),
-              ),
-              Container(
-                alignment: Alignment.center,
-                child: ElevatedButton(
+              margin: const EdgeInsets.all(20.0),
+            ),
+            Container(
+              alignment: Alignment.center,
+              margin: const EdgeInsets.all(10.0),
+              //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
+              child: ElevatedButton(
                   child: Text(
-                    'Iniciar Sesion',
+                    'Crear Cuenta',
                     style: GoogleFonts.getFont('Arimo'),
                   ),
                   style: ElevatedButton.styleFrom(
                       onPrimary: Colors.white,
-                      primary: const Color.fromRGBO(0, 0, 0, 1),
+                      primary: const Color.fromRGBO(199, 35, 27, 1),
                       minimumSize: const Size(250, 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5)),
@@ -91,12 +66,35 @@ class _Myprincipal extends State<Myprincipal> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SignIn()));
-                  },
+                            builder: (context) => welcomeSinup()));
+                  }),
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                child: Text(
+                  'Iniciar Sesion',
+                  style: GoogleFonts.getFont('Arimo'),
                 ),
+                style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    primary: const Color.fromRGBO(0, 0, 0, 1),
+                    minimumSize: const Size(250, 40),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    textStyle: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    )),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SignIn()));
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
