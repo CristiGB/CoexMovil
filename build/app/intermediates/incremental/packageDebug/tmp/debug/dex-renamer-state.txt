@@ -1,4 +1,4 @@
-#Mon Apr 04 16:43:30 COT 2022
+#Tue Apr 05 15:06:43 COT 2022
 base.0=/home/coex/StudioProjects/CoexMovil/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

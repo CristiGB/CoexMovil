@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'UI/crear_cuenta.dart';
+import 'UI/inicio_sesion.dart';
 
 //import 'package:flutter/src/material/flat_button.dart';
 
@@ -86,7 +87,12 @@ class _Myprincipal extends State<Myprincipal> {
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                       )),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignIn()));
+                  },
                 ),
               ),
             ],

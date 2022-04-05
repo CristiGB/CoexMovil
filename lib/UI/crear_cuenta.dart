@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'inicio_sesion.dart';
 
 
 class welcomeSinup extends StatelessWidget{
@@ -84,7 +85,7 @@ class welcomeSinup extends StatelessWidget{
 
                    ),
                   Container(
-                  margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                  margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
                     child: Column(
                       children: [
                         ElevatedButton(
@@ -126,7 +127,7 @@ class welcomeSinup extends StatelessWidget{
                     ),
                   ),
                   Container(
-                    color: Colors.amberAccent,
+                    //color: Colors.white70,
                     margin: EdgeInsets.fromLTRB(0, 10, 5, 0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -134,6 +135,18 @@ class welcomeSinup extends StatelessWidget{
                         Text(
                         '¿ya tienes cuenta?',
                          style: GoogleFonts.getFont('Arimo'),
+                        ),
+                    TextButton(
+                          child: Text('Inicia sesion'),
+                        style: TextButton.styleFrom(
+                          primary: Colors.red,
+                          ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignIn()));
+                      },
                         ),
                       ],
                     ),
