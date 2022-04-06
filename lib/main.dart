@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Myprincipal(),
       // Elimino el banner de debug que se encuentra en la parte superior derecha del aplicativo
       debugShowCheckedModeBanner: false,
@@ -24,6 +24,8 @@ class MyApp extends StatelessWidget {
 }
 
 class Myprincipal extends StatefulWidget {
+  const Myprincipal({Key? key}) : super(key: key);
+
   //const MyHomePage({Key? key}) : super(key: key);
   @override
   _Myprincipal createState() => _Myprincipal();
@@ -66,7 +68,7 @@ class _Myprincipal extends State<Myprincipal> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => welcomeSinup()));
+                            builder: (context) => const WelcomeSignup()));
                   }),
             ),
             Container(
@@ -87,10 +89,8 @@ class _Myprincipal extends State<Myprincipal> {
                       fontWeight: FontWeight.w400,
                     )),
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => SignIn()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const SignIn()));
                 },
               ),
             ),
