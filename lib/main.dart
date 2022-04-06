@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'UI/crear_cuenta.dart';
+import 'UI/inicio_sesion.dart';
 
 //import 'package:flutter/src/material/flat_button.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Myprincipal(),
       // Elimino el banner de debug que se encuentra en la parte superior derecha del aplicativo
       debugShowCheckedModeBanner: false,
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
 }
 
 class Myprincipal extends StatefulWidget {
+  const Myprincipal({Key? key}) : super(key: key);
+
   //const MyHomePage({Key? key}) : super(key: key);
   @override
   _Myprincipal createState() => _Myprincipal();
@@ -33,64 +36,65 @@ class _Myprincipal extends State<Myprincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: const Image(
-                  image: AssetImage('assets/rsc/logo.png'),
-                ),
-                margin: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: const Image(
+                image: AssetImage('assets/rsc/logo.png'),
               ),
-              Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(10.0),
-                //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
-                child: ElevatedButton(
-                    child: Text(
-                      'CREAR CUENTA',
-                      style: GoogleFonts.getFont('Arimo'),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        onPrimary: Colors.white,
-                        primary: const Color.fromRGBO(199, 35, 27, 1),
-                        minimumSize: const Size(250, 40),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        textStyle: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
-                        )),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => welcomeSinup()));
-                    }),
-              ),
-              Container(
-                alignment: Alignment.center,
-                child: ElevatedButton(
+              margin: const EdgeInsets.all(20.0),
+            ),
+            Container(
+              alignment: Alignment.center,
+              margin: const EdgeInsets.all(10.0),
+              //padding: EdgeInsets.fromLTRB(0, 500, 0, 0),
+              child: ElevatedButton(
                   child: Text(
-                    'INICIAR SESION',
+                    'Crear Cuenta',
                     style: GoogleFonts.getFont('Arimo'),
                   ),
                   style: ElevatedButton.styleFrom(
                       onPrimary: Colors.white,
-                      primary: const Color.fromRGBO(0, 0, 0, 1),
+                      primary: const Color.fromRGBO(199, 35, 27, 1),
                       minimumSize: const Size(250, 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5)),
                       textStyle: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w400,
                       )),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WelcomeSignup()));
+                  }),
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                child: Text(
+                  'Iniciar Sesion',
+                  style: GoogleFonts.getFont('Arimo'),
                 ),
+                style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    primary: const Color.fromRGBO(0, 0, 0, 1),
+                    minimumSize: const Size(250, 40),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    textStyle: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    )),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const SignIn()));
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
