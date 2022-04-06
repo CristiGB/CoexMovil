@@ -136,6 +136,8 @@ class WelcomeSignup extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //! uso inadecuado del positioned, se debe usar dentro de un contenedor padre llamado Stack -> children:[elemento1(), elemento2()]
+            //TODO: cambiar forma de declaracion del widget
             Positioned(
               child: Text(
                 '¿Ya tienes cuenta?',
@@ -149,8 +151,8 @@ class WelcomeSignup extends StatelessWidget {
                 primary: Colors.red,
               ),
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => SignIn()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SignIn()));
               },
             ),
           ],

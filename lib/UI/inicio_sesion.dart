@@ -62,7 +62,7 @@ class SignIn extends StatelessWidget {
               ),
               Container(
                 width: 314,
-                margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                 child: Text(
                   'Contraseña',
                   textAlign: TextAlign.left,
@@ -101,7 +101,7 @@ class SignIn extends StatelessWidget {
         ),
         Container(
           color: Colors.white70,
-          margin: EdgeInsets.fromLTRB(0, 10, 5, 0),
+          margin: const EdgeInsets.fromLTRB(0, 10, 5, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
