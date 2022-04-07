@@ -136,27 +136,46 @@ class WelcomeSignup extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //! uso inadecuado del positioned, se debe usar dentro de un contenedor padre llamado Stack -> children:[elemento1(), elemento2()]
-            //TODO: cambiar forma de declaracion del widget
-            Positioned(
-              child: Text(
-                '¿Ya tienes cuenta?',
-                style: GoogleFonts.getFont('Arimo'),
-              ),
-              bottom: 0,
-            ),
+            const Text('Tienes cuenta'),
             TextButton(
-              child: const Text('Inicia sesion'),
-              style: TextButton.styleFrom(
-                primary: Colors.red,
-              ),
+              child: const Text('Iniciar Sesion'),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const SignIn()));
               },
-            ),
+            )
           ],
-        ),
+        )
+        // Stack(
+        //   // mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     //! uso inadecuado del positioned, se debe usar dentro de un contenedor padre llamado Stack -> children:[elemento1(), elemento2()]
+        //     //TODO: cambiar forma de declaracion del widget
+        //     Positioned(
+        //       child: Row(
+        //         children: [
+        //           Text(
+        //             '¿Ya tienes cuenta?',
+        //             style: GoogleFonts.getFont('Arimo'),
+        //           ),
+        //           TextButton(
+        //             child: const Text('Inicia sesion'),
+        //             style: TextButton.styleFrom(
+        //               primary: Colors.red,
+        //             ),
+        //             onPressed: () {
+        //               Navigator.push(
+        //                   context,
+        //                   MaterialPageRoute(
+        //                       builder: (context) => const SignIn()));
+        //             },
+        //           ),
+        //         ],
+        //       ),
+        //       bottom: 0,
+        //     ),
+        //   ],
+        // ),
       ],
     )));
   }
