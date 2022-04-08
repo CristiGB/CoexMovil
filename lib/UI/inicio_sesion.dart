@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'crear_cuenta.dart';
+import 'SingIn/crear_cuenta.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class SignIn extends StatelessWidget {
           width: 246,
           //margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
           child: Text(
-            'Registrate y empieza tu desarrollo exponecial!',
+            'Empieza tu desarrollo exponecial!',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.black,
@@ -76,22 +76,53 @@ class SignIn extends StatelessWidget {
               ),
             ])),
         Container(
-          margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+          margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
+          width: 250,
           child: Column(
             children: [
               ElevatedButton(
-                child: Text(
-                  'Hola',
-                  style: GoogleFonts.getFont('Arimo'),
+                child: Row(
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/rsc/GL.png',
+                      height: 20.0,
+                      width: 20.0,
+                      color: Colors.white,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(10),
+                    ),
+                    Text(
+                      'Ingresar con Google',
+                      style: GoogleFonts.getFont('Arimo'),
+                    ),
+                  ],
                 ),
                 style: ElevatedButton.styleFrom(
                     onPrimary: Colors.white,
                     primary: const Color.fromRGBO(199, 35, 27, 1),
                     minimumSize: const Size(250, 41),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)),
+                        borderRadius: BorderRadius.circular(8)),
                     textStyle: const TextStyle(
                       fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                    )),
+                onPressed: () {},
+              ),
+              ElevatedButton(
+                child: Text(
+                  'Iniciar Sesión',
+                  style: GoogleFonts.getFont('Arimo'),
+                ),
+                style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    primary: const Color.fromRGBO(0, 0, 0, 1),
+                    minimumSize: const Size(250, 41),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    textStyle: const TextStyle(
+                      fontSize: 18,
                       fontWeight: FontWeight.w400,
                     )),
                 onPressed: () {},
@@ -99,30 +130,31 @@ class SignIn extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          color: Colors.white70,
-          margin: const EdgeInsets.fromLTRB(0, 10, 5, 0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Text(
-              //   '¿Aún no tienes cuenta? Registrate',
-              //   style: GoogleFonts.getFont('Arimo'),
-              // ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 15),
+        //mainAxisAlignment: MainAxisAlignment.center,
+        //! uso inadecuado del positioned, se debe usar dentro de un contenedor padre llamado Stack -> children:[elemento1(), elemento2()]
+        //TODO: cambiar forma de declaracion del widget
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              '¿No tienes cuenta?',
+              style: GoogleFonts.oswald(),
+            ),
+            TextButton(
+              child: const Text('Registrate'),
+              style: TextButton.styleFrom(
+                primary: Colors.red,
+                textStyle: GoogleFonts.oswald(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
                 ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const WelcomeSignup()));
-                },
-                child: const Text('¿Aún no tienes cuenta? Registrate'),
               ),
-            ],
-          ),
+              onPressed: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => const WelcomeSignup()));
+              },
+            ),
+          ],
         ),
       ],
     )));
